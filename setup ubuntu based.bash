@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Install google chrome
-# https://doc.ubuntu-fr.org/google_chrome
+## https://doc.ubuntu-fr.org/google_chrome
 sudo sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
 wget -O- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo tee /etc/apt/trusted.gpg.d/linux_signing_key.pub
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
 sudo apt update
-# if Warning
+## if Warning
 sudo apt-key export D38B4796 | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/chrome.gpg
-# install
+## install
 sudo apt-get install google-chrome-stable
 
 
@@ -19,26 +19,39 @@ ssh-keygen -t ed25519 -C hei.jerry.2@gmail.com 		# generate ssh key
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
+
 # Oh My zsh
 sudo apt install zsh
-# https://ohmyz.sh/#install
-# ohmzsh syntax hoghlighting: https://linuxhint.com/enable-syntax-highlighting-zsh/
-# ohmzsh auto-suggestions: https://linuxhint.com/use-zsh-auto-suggestions/
+## https://ohmyz.sh/#install
+## ohmzsh syntax hoghlighting: https://linuxhint.com/enable-syntax-highlighting-zsh/
+## ohmzsh auto-suggestions: https://linuxhint.com/use-zsh-auto-suggestions/
 
-# ENV DEVELOPPEMENT
 
-# node js environnement
+# Node js environnement
 ## install nvm
 # https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating
 ## install nodejs
 nvm install --lts
 nvm use --lts
+npm i -g yarn
 
-# java environnement
+
+# Java environnement
 sudo apt install openjdk-21-jdk
 sudo apt install openjdk-21-jre
 sudo apt install maven
-# ajouter config javahome
+## config JAVA_HOME
+## in .bashrc
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
+
+
+# Install VS Code
+## https://code.visualstudio.com/docs/setup/linux
+sudo apt install ./file.deb
+
+
+>>>
 
 # install and configure postgresql
 sudo apt install postgresql
@@ -53,7 +66,7 @@ sudo -iu postgres
 # https://docs.docker.com/engine/install/ubuntu/
 sudo usermod -aG docker $USER
 
-sudo snap install code --classic # download .deb
+
 sudo snap install postman
 sudo snap install intellij-idea-community --classic
 sudo snap install pycharm-community --classic
