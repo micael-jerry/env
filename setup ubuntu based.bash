@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # work with github
 git config --global user.name "Micael Jerry"
 git config --global user.email hei.jerry.2@gmail.com
@@ -9,7 +11,7 @@ ssh-add ~/.ssh/id_ed25519
 
 # node js environnement
 ## install nvm
-https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating
+# https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating
 ## install nodejs
 nvm install --lts
 nvm use --lts
@@ -27,10 +29,10 @@ sudo systemctl start postgresql
 sudo systemctl enable postgresql
 
 sudo -iu postgres
-https://openbasesystems.com/2023/06/20/postgresql-error-fatal-role-username-does-not-exist/
+# https://openbasesystems.com/2023/06/20/postgresql-error-fatal-role-username-does-not-exist/
 
 # install and configure docker
-https://docs.docker.com/engine/install/ubuntu/
+# https://docs.docker.com/engine/install/ubuntu/
 sudo usermod -aG docker $USER
 
 sudo snap install code --classic

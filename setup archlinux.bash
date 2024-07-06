@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # update all package,key and system
 eos-update
 
