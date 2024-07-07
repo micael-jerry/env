@@ -52,6 +52,26 @@ export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 export PATH=$PATH:$JAVA_HOME/bin
 
 
+# Ruby
+## https://www.theodinproject.com/lessons/ruby-installing-ruby
+## install dependencie
+sudo apt install gcc make libssl-dev libreadline-dev zlib1g-dev libsqlite3-dev libyaml-dev
+## install rbenv
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+exit
+## install ruby-build
+mkdir -p "$(rbenv root)"/plugins
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+## install ruby
+rbenv install 3.3.0 --verbose
+rbenv global 3.3.0
+## gem
+gem install solargraph
+gem install pry-byebug
+
+
 # MongoDB
 ## Install
 ## https://linuxgenie.net/install-mongodb-ubuntu-24-04/
@@ -97,18 +117,3 @@ sudo -iu postgres
 # install and configure docker
 # https://docs.docker.com/engine/install/ubuntu/
 sudo usermod -aG docker $USER
-
-
-# Cloud environnement
-sudo pacman -S aws-cli
-sudo pacman -S python-rich
-yay -S aws-sam-cli-bin
-
-yay -S xdman
-yay -S mongodb-compass
-
-# Ruby environnement
-## https://www.theodinproject.com/lessons/ruby-installing-ruby
-sudo apt install ruby-full
-sudo gem install solargraph
-sudo gem install pry-byebug
