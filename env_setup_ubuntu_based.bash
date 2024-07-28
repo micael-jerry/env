@@ -88,6 +88,27 @@ sudo systemctl enable mongod.service
 ## install
 sudo apt install ./file.deb
 
+# PostgreSQL
+## Install
+## https://www.youtube.com/watch?v=UGfteFq_6Co
+## https://linuxgenie.net/how-to-install-and-set-up-postgresql-on-ubuntu-22-04/
+sudo apt install postgresql
+sudo systemctl status postgresql
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+sudo -u postgres psql
+alter user with password 'new password';
+quit
+# https://openbasesystems.com/2023/06/20/postgresql-error-fatal-role-username-does-not-exist/
+
+
+# PgAdmin
+## Install: https://www.pgadmin.org/download/pgadmin-4-apt/
+curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+sudo apt install pgadmin4-desktop
+
 
 # VS Code
 ## https://code.visualstudio.com/docs/setup/linux
@@ -101,18 +122,6 @@ sudo snap install postman
 sudo snap install intellij-idea-community --classic
 sudo snap install pycharm-community --classic
 
-
->>>
-
-# PostgreSQL
-## https://linuxgenie.net/how-to-install-and-set-up-postgresql-on-ubuntu-22-04/
-sudo apt install postgresql
-
-sudo systemctl start postgresql
-sudo systemctl enable postgresql
-
-sudo -iu postgres
-# https://openbasesystems.com/2023/06/20/postgresql-error-fatal-role-username-does-not-exist/
 
 # install and configure docker
 # https://docs.docker.com/engine/install/ubuntu/
