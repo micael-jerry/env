@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt install build-essential
+
 # Google Chrome
 ## install
 ## https://doc.ubuntu-fr.org/google_chrome
