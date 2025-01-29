@@ -17,9 +17,9 @@ sudo apt-get install google-chrome-stable
 ## install
 sudo apt install git
 ## config
-git config --global user.name "Micael Jerry"
-git config --global user.email hei.jerry.2@gmail.com
-ssh-keygen -t ed25519 -C hei.jerry.2@gmail.com 		# generate ssh key
+git config --global user.name "<name>"
+git config --global user.email <email>
+ssh-keygen -t ed25519 -C <email> 		# generate ssh key
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
