@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo apt install build-essential
-
 # Google Chrome
 ## install
 ## https://doc.ubuntu-fr.org/google_chrome
@@ -31,6 +29,12 @@ sudo apt install zsh
 ## https://ohmyz.sh/#install
 ## ohmzsh syntax hoghlighting: https://linuxhint.com/enable-syntax-highlighting-zsh/
 ## ohmzsh auto-suggestions: https://linuxhint.com/use-zsh-auto-suggestions/
+
+
+# Develop with C
+sudo apt install build-essential
+sudo apt install clang
+sudo apt install valgrind
 
 
 # Node JS
