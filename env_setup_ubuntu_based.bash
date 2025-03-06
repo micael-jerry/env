@@ -95,18 +95,11 @@ sudo systemctl enable mongod.service
 sudo apt install ./file.deb
 
 # PostgreSQL
-## Install
-## https://www.youtube.com/watch?v=UGfteFq_6Co
-## https://linuxgenie.net/how-to-install-and-set-up-postgresql-on-ubuntu-22-04/
 sudo apt install postgresql
+# https://www.cherryservers.com/blog/install-postgresql-ubuntu
 sudo systemctl status postgresql
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
-
-sudo -u postgres psql
-alter user with password 'new password';
-quit
-# https://openbasesystems.com/2023/06/20/postgresql-error-fatal-role-username-does-not-exist/
 
 
 # PgAdmin
