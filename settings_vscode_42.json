@@ -1,0 +1,113 @@
+{
+  // EDITEURR
+  //  Le petit map de code a droite
+  "editor.minimap.enabled": true,
+  // Formater le code apres sauvegarde
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  // Affichage des espace
+  "editor.renderWhitespace": "trailing",
+  // Editer le balise (html, composant react,..) liee quand on en modifie un
+  "editor.linkedEditing": true,
+  // Mettre les occurence en valeur
+  "editor.occurrencesHighlight": "off",
+  // Replacer l'ancien valeur quand on accept une suggrestion
+  "editor.suggest.insertMode": "replace",
+  // Ne pas utiliser la premier suggestion directement
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  // Visualier les <= >= =>
+  "editor.fontLigatures": true,
+  // Espace entre les ligne
+  "editor.lineHeight": 0,
+  // Grossisement du font
+  "editor.fontSize": 14,
+  // Coloriser les parenthese par paire
+  "editor.guides.bracketPairs": "active",
+  "editor.insertSpaces": false,
+
+  // GESTION DE FICHIER
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.insertFinalNewline": false,
+
+  // EXPLORER
+  "explorer.autoReveal": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.editor.enablePreview": false,
+
+  // EMMET
+  "emmet.triggerExpansionOnTab": true,
+
+  // GIT
+  "git.confirmSync": true,
+  "git.enableSmartCommit": true,
+
+  // 42 HEADER
+  "42header.username": "mfidimal",
+  "42header.email": "mfidimal@student.42antananarivo.mg",
+
+  // Utiliser le terminal du host
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "host-spawn",
+      "args": ["bash"]
+    },
+    "zsh": {
+      "path": "host-spawn",
+      "args": ["zsh"]
+    },
+    "fish": {
+      "path": "host-spawn",
+      "args": ["fish"]
+    }
+  },
+
+  "redhat.telemetry.enabled": true,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "terminal.integrated.inheritEnv": false,
+  "boot-java.rewrite.reconcile": true,
+  "editor.unicodeHighlight.includeComments": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tabSize": 2,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "tabnine.experimentalAutoImports": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "[c]": {
+    "editor.tabSize": 4,
+    "editor.formatOnPaste": false,
+    "editor.wordBasedSuggestions": "allDocuments",
+    "editor.suggest.insertMode": "replace",
+    "editor.semanticHighlighting.enabled": true
+  },
+  "window.customTitleBarVisibility": "auto",
+  "vscode-pets.petSize": "large",
+  "workbench.colorTheme": "Cyberpunk"
+}
